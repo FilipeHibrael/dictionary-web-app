@@ -1,0 +1,23 @@
+.search {
+    position: relative;
+    padding-bottom: 20px;
+
+    &__search-bar {
+        width: 100%;
+        border: none;
+        background-color: var(--color-n-200);
+        padding: 24px;
+        border-radius: 16px;
+
+        &:focus {
+            outline-color: var(--color-a);
+        }
+    }
+
+    &::after {
+        content: url('../../assets/icon-search.svg');
+        position: absolute;
+        right: 24px;
+        top: 24px;
+    }
+}

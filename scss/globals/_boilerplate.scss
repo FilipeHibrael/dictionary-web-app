@@ -1,5 +1,6 @@
 body {
   font-family: 'Lora', serif;
+  font-size: 1rem;
   max-width: 720px;
   padding: 20px;
   margin: 0 auto;
@@ -9,11 +10,19 @@ body {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 button {
-  font-family: 'Lora', serif;
+  font-family: inherit;
+  font-size: inherit;
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+input {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
