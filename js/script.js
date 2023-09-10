@@ -1,8 +1,8 @@
-import wordMeanings from './modules/meanings.js';
+import wordInfo from './modules/word-info.js';
 
 function showWordInfo(data) {
   const main = document.querySelector('main');
-  main.append(wordMeanings(data));
+  wordInfo(data, main);
 }
 
 async function getWordInfo(word) {

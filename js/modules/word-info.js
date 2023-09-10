@@ -1,7 +1,12 @@
-export default function wordMeanings(data) {
+export default function wordInfo(data, main) {
+  const meanings = wordMeanings(data);
+  main.append(meanings);
+}
+
+function wordMeanings(data) {
+  const meanings = data.meanings;
   const meaningSection = newElement('section', 'meaning', null);
 
-  const meanings = data.meanings;
   meanings.forEach((meaning) => {
     const div = newElement('div', 'meaning__item', null);
     const h2 = newElement(
@@ -25,8 +30,29 @@ export default function wordMeanings(data) {
 
     meaningSection.appendChild(div);
   });
+  meaningSection.appendChild(wordSourceUrl(data));
 
-  return meaningSection
+  return meaningSection;
+}
+
+function wordSourceUrl(data) {
+  const sourceUrl = data.sourceUrls;
+  const div = newElement('div', 'source-url', null);
+  const h4 = newElement('h4', 'source-url__title', 'Source');
+  const ul = newElement('ul', 'source-url__links', null);
+
+  sourceUrl.map((url) => {
+    const li = newElement('li', 'source-url__link', null);
+    const a = newElement('a', null, url);
+    a.href = sourceUrl[0];
+    a.setAttribute('target', '_blank');
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  div.append(h4, ul);
+
+  return div;
 }
 
 function newElement(tag, className, content) {
@@ -65,8 +91,8 @@ function createSimilarWordsList(title, wordsList) {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.innerText = word;
-    const location = window.location.toString()
-    a.href = location.replace(/=(.*)/, `=${a.innerText}`)
+    const location = window.location.toString();
+    a.href = location.replace(/=(.*)/, `=${a.innerText}`);
     li.appendChild(a);
     ul.appendChild(li);
   });
