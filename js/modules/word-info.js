@@ -1,6 +1,32 @@
 export default function wordInfo(data, main) {
   const meanings = wordMeanings(data);
-  main.append(meanings);
+  const keyword = keywordSection(data);
+  main.append(keyword, meanings);
+}
+
+function keywordSection(data) {
+  if (!document.querySelector('.keyword')) {
+    const keywordSection = newElement('section', 'keyword', null);
+    const div = newElement('div', 'keyword__text', null);
+    const h1 = newElement('h1', 'keyword__title', data.word);
+    const span = newElement('span', 'keyword__phonetic', null);
+    div.append(h1, span);
+    const button = newElement('button', 'keyword__button', null);
+    const audioElement = newElement('audio', 'keyboard__audio');
+    button.appendChild(audioElement);
+
+    data.phonetics.forEach((phonetic) => {
+      if (phonetic.audio && phonetic.text) {
+        span.innerText = phonetic.text;
+        audioElement.setAttribute('src', phonetic.audio);
+        button.addEventListener('click', () => audioElement.play());
+      }
+    });
+
+    keywordSection.append(div, button);
+    return keywordSection;
+  }
+  return '';
 }
 
 function wordMeanings(data) {

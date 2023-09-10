@@ -1,0 +1,23 @@
+.keyword {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        font-size: 4rem;
+        color: var(--color-n-600);
+        margin-bottom: 8px;
+    }
+
+    &__phonetic {
+        font-weight: 700;
+        font-size: 1.2em;
+        color: var(--color-a);
+    }
+
+    &__button {
+        width: 75px;
+        height: 75px;
+        background: url('../../assets/icon-play.svg') center center;
+    }
+}
