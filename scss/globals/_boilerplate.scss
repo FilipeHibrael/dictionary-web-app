@@ -1,6 +1,6 @@
 body {
   font-family: 'Lora', serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   max-width: 720px;
   padding: 20px;
   margin: 0 auto;
@@ -25,4 +25,13 @@ input {
     font-family: inherit;
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
