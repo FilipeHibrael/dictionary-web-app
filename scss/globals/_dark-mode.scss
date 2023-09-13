@@ -1,0 +1,20 @@
+body.dark-mode {
+  background-color: var(--color-n-600);
+  color: var(--color-n-100);
+
+  .search__search-bar {
+    background-color: var(--color-n-500);
+    color: var(--color-n-100);
+
+    &::placeholder {
+      color: var(--color-n-400);
+    }
+  }
+
+  .font-style__buttons {
+    background-color: var(--color-n-500);
+    color: var(--color-n-400);
+    box-shadow: none;
+    border: 2px solid var(--color-a);
+  }
+}

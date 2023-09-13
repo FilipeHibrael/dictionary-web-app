@@ -14,10 +14,14 @@
     padding-right: 36px;
     position: relative;
 
-    &__selected::after {
-      content: url('../../assets/icon-arrow-down.svg');
-      position: relative;
-      right: -12px;
+    &__selected {
+      color: inherit;
+
+      &::after {
+        content: url('../../assets/icon-arrow-down.svg');
+        position: relative;
+        right: -12px;
+      }
     }
 
     &__buttons {
@@ -40,6 +44,7 @@
     }
 
     &__button {
+      color: inherit;
       text-align: start;
       padding: 6px 18px;
 
@@ -87,7 +92,7 @@
         position: absolute;
         top: 4px;
         left: 4px;
-        transition: transform 0.4s;
+        transition: transform 0.3s;
       }
     }
   }

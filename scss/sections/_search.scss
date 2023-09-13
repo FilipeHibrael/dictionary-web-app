@@ -1,25 +1,30 @@
 .search {
-    position: relative;
-    padding-bottom: 20px;
+  position: relative;
+  padding-bottom: 20px;
 
-    &__search-bar {
-        width: 100%;
-        border: none;
-        background-color: var(--color-n-200);
-        padding: 24px;
-        border-radius: 16px;
+  &__search-bar {
+    width: 100%;
+    color: var(--color-n-700);
+    background-color: var(--color-n-200);
+    padding: 24px;
+    border: none;
+    border-radius: 16px;
 
-        &:focus {
-            outline-color: var(--color-a);
-        }
+    &:focus {
+      outline-color: var(--color-a);
     }
 
-    &__button {
-        background: url('../../assets/icon-search.svg') no-repeat center center;
-        width: 18px;
-        height: 18px;
-        position: absolute;
-        top: 24px;
-        right: 24px;
+    &::placeholder {
+      color: var(--color-n-400);
     }
+  }
+
+  &__button {
+    background: url('../../assets/icon-search.svg') no-repeat center center;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
 }

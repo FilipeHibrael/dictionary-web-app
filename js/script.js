@@ -1,5 +1,6 @@
 import wordInfo from './modules/word-info.js';
 import selectFont from './modules/select-font.js';
+import darkModeInint from './modules/dark-mode.js';
 
 function showWordInfo(data) {
   const main = document.querySelector('main');
@@ -19,3 +20,4 @@ const word = urlParams.get('word');
 if (word) getWordInfo(word);
 
 selectFont()
+darkModeInint()

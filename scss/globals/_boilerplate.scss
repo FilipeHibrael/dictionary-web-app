@@ -6,11 +6,6 @@ body {
   max-width: 720px;
   padding: 20px;
   margin: 0 auto;
-
-  &.dark-mode {
-    background-color: var(--color-n-600);
-    color: var(--color-n-100);
-  }
 }
 
 * {
