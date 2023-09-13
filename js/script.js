@@ -1,4 +1,5 @@
 import wordInfo from './modules/word-info.js';
+import selectFont from './modules/select-font.js';
 
 function showWordInfo(data) {
   const main = document.querySelector('main');
@@ -16,3 +17,5 @@ async function getWordInfo(word) {
 const urlParams = new URLSearchParams(window.location.search);
 const word = urlParams.get('word');
 if (word) getWordInfo(word);
+
+selectFont()

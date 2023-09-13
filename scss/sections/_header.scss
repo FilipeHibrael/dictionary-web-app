@@ -6,47 +6,89 @@
 
   &__settings {
     display: flex;
-    gap: 16px;
+    align-items: center;
   }
 
-  &__font-style,
-  &__color-theme {
+  .font-style {
+    font-size: 1rem;
+    padding-right: 36px;
+    position: relative;
+
+    &__selected::after {
+      content: url('../../assets/icon-arrow-down.svg');
+      position: relative;
+      right: -12px;
+    }
+
+    &__buttons {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      background: var(--color-n-100);
+      width: 148px;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 0 28px rgba(0, 0, 0, 0.12);
+      position: absolute;
+      right: 12px;
+      top: 32px;
+      z-index: 1;
+
+      &.active {
+        display: flex;     
+      }
+    }
+
+    &__button {
+      text-align: start;
+      padding: 6px 18px;
+
+      &.active {
+        color: var(--color-a);
+      }
+    }
+  }
+
+  &__dark-mode {
     display: flex;
     align-items: center;
     gap: 16px;
-  }
+    height: 100%;
+    padding-left: 24px;
+    border-left: 1px solid var(--color-n-300);
 
-  &__font-style {
-    padding-right: 24px;
-    border-right: 1px solid var(--color-n-300);
-  }
+    &.active .header__toggle::before {
+      transform: translateX(24px);
+    }
 
-  &__color-theme:hover {
+    &.active, &:hover {
+      .header__toggle {
+        background-color: var(--color-a);
+      }
+  
+      svg path {
+        stroke: var(--color-a);
+      }
+    }
+
     .header__toggle {
-      background-color: var(--color-a);
-    }
-
-    svg path {
-      stroke: var(--color-a);
-    }
-  }
-
-  &__toggle {
-    background-color: var(--color-n-400);
-    height: 24px;
-    width: 48px;
-    border-radius: 50px;
-    position: relative;
-
-    &::before {
-      content: '';
-      height: 16px;
-      width: 16px;
-      background-color: var(--color-n-100);
-      border-radius: 50%;
-      position: absolute;
-      top: 4px;
-      left: 4px;
+      background-color: var(--color-n-400);
+      height: 24px;
+      width: 48px;
+      border-radius: 50px;
+      position: relative;
+  
+      &::before {
+        content: '';
+        height: 16px;
+        width: 16px;
+        background-color: var(--color-n-100);
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        transition: transform 0.4s;
+      }
     }
   }
 }
