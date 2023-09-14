@@ -1,4 +1,4 @@
-//loader-indicator
+//Loader-indicator
 .spinner {
   min-height: 275px;
 }
@@ -50,4 +50,23 @@
   position: absolute !important;
   white-space: nowrap !important;
   width: 1px !important;
+}
+
+//Error
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  margin-top: 80px;
+
+  span {
+    transform: scale(4);
+    margin-bottom: 24px;
+  }
+
+  p {
+    max-width: 36ch;
+  }
 }
