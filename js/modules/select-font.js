@@ -4,7 +4,7 @@ const selected = document.querySelector('.font-style__selected');
 const selectMenu = document.querySelector('.font-style__buttons');
 const selectButtons = document.querySelectorAll('.font-style__button');
 
-export default function selectFont() {
+export default function selectFontInit() {
   if (!localStorage.getItem('font')) localStorage.setItem('font', 'Serif');
   changeSelectedFont(localStorage.getItem('font'));
 

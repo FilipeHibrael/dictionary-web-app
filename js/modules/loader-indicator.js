@@ -1,4 +1,4 @@
-export default function loaderInit() {
+export default function loaderIndicator() {
   const main = document.querySelector('main');
   const div = document.createElement('div');
   div.classList.add('spinner');

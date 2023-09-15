@@ -1,6 +1,7 @@
-export default function wordInfo(data, main) {
+export default function wordInfo(data) {
   const meanings = wordMeanings(data);
   const keyword = keywordSection(data);
+  const main = document.querySelector('main')
   main.append(keyword, meanings);
 }
 
