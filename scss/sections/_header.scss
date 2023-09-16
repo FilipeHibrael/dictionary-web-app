@@ -39,7 +39,7 @@
       z-index: 1;
 
       &.active {
-        display: flex;     
+        display: flex;
       }
     }
 
@@ -66,11 +66,12 @@
       transform: translateX(24px);
     }
 
-    &.active, &:hover {
+    &.active,
+    &:hover {
       .header__toggle {
         background-color: var(--color-a);
       }
-  
+
       svg path {
         stroke: var(--color-a);
       }
@@ -82,7 +83,7 @@
       width: 48px;
       border-radius: 50px;
       position: relative;
-  
+
       &::before {
         content: '';
         height: 16px;
@@ -94,6 +95,21 @@
         left: 4px;
         transition: transform 0.3s;
       }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    padding-top: 8px;
+    padding-bottom: 28px;
+
+    .font-style {
+      padding-right: 24px;
+    }
+
+    &__dark-mode {
+      padding-left: 12px;
     }
   }
 }

@@ -1,23 +1,42 @@
 .keyword {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 
+  &__title {
+    color: inherit;
+    margin-bottom: 8px;
+    word-break: break-all;
+  }
+
+  &__phonetic {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--color-a);
+  }
+
+  &__button {
+    width: 75px;
+    height: 75px;
+    background: url('../../assets/icon-play.svg') no-repeat center center;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 420px) {
+  .keyword {
     &__title {
-        font-size: 4rem;
-        color: inherit;
-        margin-bottom: 8px;
+      margin-bottom: 0;
     }
 
     &__phonetic {
-        font-weight: 700;
-        font-size: 1.2em;
-        color: var(--color-a);
-    }
+        font-size: 1.05em;
+      }
 
     &__button {
-        width: 75px;
-        height: 75px;
-        background: url('../../assets/icon-play.svg') center center;
+      min-width: 60px;
+      height: 60px;
     }
+  }
 }

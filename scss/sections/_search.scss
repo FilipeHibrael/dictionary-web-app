@@ -28,3 +28,18 @@
     right: 24px;
   }
 }
+
+@media (max-width: 420px) {
+  .search {
+    padding-bottom: 12px;
+
+    &__search-bar {
+      padding: 18px;
+    }
+
+    &__button {
+      top: 21px;
+      right: 21px;
+    }
+  }
+}

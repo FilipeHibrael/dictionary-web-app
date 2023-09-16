@@ -1,0 +1,47 @@
+h1 {
+  font-size: 4rem;
+}
+
+h4 {
+  color: var(--color-n-400);
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+p {
+    line-height: 1.4;
+    font-size: 1.125rem;
+  }
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 3.2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+      
+      h4 {
+        font-size: 1.125rem;
+      }
+
+      p {
+        line-height: 1.25;
+        font-size: 1.025rem;
+      }
+}
